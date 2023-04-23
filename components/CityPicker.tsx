@@ -60,12 +60,6 @@ function CityPicker() {
         lable: country.name
     }))
 
-
-
-
-
-
-
     const handleSelectedCountry = (option: option) => {
         setSelectedCountry(option);
         setSelectedCity(null);
@@ -89,7 +83,7 @@ function CityPicker() {
                     value={selectedCountry}
                     onChange={handleSelectedCountry}
                     getOptionLabel={(options) => options['lable']}
-                    getOptionValue={(options) => options['value']}
+                    getOptionValue={(options) => options['lable']}
                 />
             </div>
 
@@ -115,7 +109,7 @@ function CityPicker() {
                         value={selectedCity}
                         onChange={handleSelectedCity}
                         getOptionLabel={(options) => options['lable']}
-                        getOptionValue={(options) => options['value']}
+                        getOptionValue={(options) => options['lable']}
                     />
                 </div>
             )}
