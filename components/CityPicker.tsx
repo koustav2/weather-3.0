@@ -18,7 +18,7 @@ type option = {
         isoCode: string;
     },
     lable: string
-} | null;
+} | null| undefined ;
 
 type cityOption = {
     value: {
@@ -29,7 +29,7 @@ type cityOption = {
         stateCode: string;
     },
     lable: string
-} | null;
+} | null| undefined;
 
 
 
@@ -50,22 +50,13 @@ function CityPicker() {
     const [selectedCity, setSelectedCity] = useState<cityOption>(null);
     const router = useRouter();
 
-    const options = Country.getAllCountries().map
-    ((country) => ({
-        value: {
-            latitude: country.latitude,
-            longitude: country.longitude,
-            isoCode: country.isoCode,
-        },
-        lable: country.name
-    }))
 
     const handleSelectedCountry = (option: option) => {
         setSelectedCountry(option);
         setSelectedCity(null);
     }
 
-    const handleSelectedCity = (option:cityOption)=>{
+    const handleSelectedCity = (option: cityOption) => {
         setSelectedCity(option);
         router.push(`/location/${option?.value.name}/${option?.value.latitude}/${option?.value.longitude}`)
     }
@@ -95,14 +86,14 @@ function CityPicker() {
                     </div>
                     <Select
                         className='text-black'
-                        {...City.getCitiesOfCountry(
-                            selectedCountry.value.isoCode)?.map((state) =>({
+                        options={City.getCitiesOfCountry(
+                            selectedCountry.value.isoCode)?.map((state) => ({
                                 value: {
                                     latitude: state.latitude,
                                     longitude: state.longitude,
                                     countryCode: state.countryCode,
-                                    name:state.name,
-                                    stateCode:state.stateCode
+                                    name: state.name,
+                                    stateCode: state.stateCode
                                 },
                                 lable: state.name
                             }))}
