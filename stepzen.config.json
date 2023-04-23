@@ -1,0 +1,4 @@
+{
+  "endpoint": "api/xrayed-scorpion",
+  "root": "stepzen/curl"
+}

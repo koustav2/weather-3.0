@@ -1,0 +1,1 @@
+stepzen start --dir=./ --endpoint=api/xrayed-scorpion --dashboard=local --port=5005
