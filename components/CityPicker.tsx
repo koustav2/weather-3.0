@@ -95,7 +95,7 @@ function CityPicker() {
                     </div>
                     <Select
                         className='text-black'
-                        options={City.getCitiesOfCountry(
+                        {...City.getCitiesOfCountry(
                             selectedCountry.value.isoCode)?.map((state) =>({
                                 value: {
                                     latitude: state.latitude,

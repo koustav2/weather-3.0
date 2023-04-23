@@ -10,8 +10,8 @@ import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
 export const revalidate =60
 
 type Props = {
-  params: {
-    city: string;
+  params: { 
+    city: string ;
     lat: string;
     lon: string;
   }
