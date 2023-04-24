@@ -22,7 +22,8 @@ function InformationPanel({ city, lat, lon, results }: Props) {
         <div className="text-white p-10 bg-gradient-to-br from-[#394F68] to-[#183B7E]">
             <div className="pb-5">
                 <h1 className="text-4xl font-bold">{decodeURI(city)}</h1>
-                <p className="text-sm text-gray-400">Lon/Lat : {lon} {lat}</p>
+                <p className="text-sm text-gray-400">Lat : {lat}</p>
+                <p className="text-sm text-gray-400">Lon : {lon} </p>
             </div>
             <CityPicker />
             <hr className="my-10" />

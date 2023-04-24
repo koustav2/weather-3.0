@@ -50,12 +50,6 @@ async function WeatherPage({ params: { city, lat, lon } }: Props) {
             </p>
           </div>
 
-          <div className="m-2 mb-10">
-            <CalloutCard
-              message="This is where GPT-4 Details Will Go come in Future .still dont't have access to GPT-4"
-            />
-          </div>
-
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 m-2">
             <StatsCard
               title="Maximun temp"
